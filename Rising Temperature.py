@@ -21,4 +21,4 @@ def rising_temperature(weather: pd.DataFrame) -> pd.DataFrame:
 BD1 = pd.read_excel("Prueba.xlsx")
 
 Activo = rising_temperature(BD1)
-print(Activo)
+
