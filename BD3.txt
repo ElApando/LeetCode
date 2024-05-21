@@ -1,0 +1,4 @@
+product_id	product_name
+100.00	Nokia
+200.00	Apple
+300.00	Samsung
