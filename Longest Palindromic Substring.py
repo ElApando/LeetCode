@@ -1,87 +1,65 @@
-def longestPalindrome(s: str) -> str:
-	Cadena = s
-	Lista = []
-	Revision = ""
-	Bandera = 0
+""" Longest Palindromic Substring
+Given a string s, return the longest palindromic substring in s.
 
-	if len(Cadena) == 1:
-	    return Cadena
+Example 1:
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
 
-	for i in range(0,len(Cadena),1):
-		for j in range(0,len(Cadena[Bandera:]),1):
-			Revision = Revision + Cadena[j+Bandera]
+Example 2:
+Input: s = "cbbd"
+Output: "bb"
+"""
 
-			if Revision == Revision[::-1]:
-				Lista.append(Revision)
+def longest_palindrome(st_word: str) -> str:
+    """ longest_palindrome
+    
+    Parameters:
+		- st_word *(str)* - Palabra que contine el paindromo
+    Returns:
+		- ls_save *(list)* - Palindromo
+    """
+    ls_save = []
+    st_check = ""
+    in_flag = 0
 
-				if len(Revision) == len(Cadena[Bandera:]):
-					Maximo = 0
-					Cadena_Larga = ""
+    if len(st_word) == 1:
+        return st_word
 
-					for Elemento in Lista:
-						Tamaño = len(Elemento)
-						
-						if Tamaño > Maximo:
-							Cadena_Larga = Elemento
-							Maximo = Tamaño
+    for _ in range(0,len(st_word),1):
+        for jj in range(0,len(st_word[in_flag:]),1):
+            st_check = st_check + st_word[jj+in_flag]
 
-					Lista = Cadena_Larga
+            if st_check == st_check[::-1]:
+                ls_save.append(st_check)
 
-					if Lista == "":
-						Lista = Cadena[0]
+                if len(st_check) == len(st_word[in_flag:]):
+                    in_max = 0
+                    st_word_lenght = ""
 
-					return Lista
- 
-			elif len(Revision) == len(Cadena[Bandera:]):
-				Bandera = Bandera+1
-				Revision = ""
+                    for element in ls_save:
+                        size = len(element)
 
-			else:
-				pass
+                        if size > in_max:
+                            st_word_lenght = element
+                            in_max = size
 
-	# try:			
-	# 	Maximo = 0
-	# 	Cadena_Larga = ""
+                    ls_save = st_word_lenght
 
-	# 	for Elemento in Lista:
-	# 		Tamaño = len(Elemento)
-			
-	# 		if Tamaño > Maximo:
-	# 			Cadena_Larga = Elemento
-	# 			Maximo = Tamaño
+                    if ls_save == "":
+                        ls_save = st_word[0]
 
-	# 	Lista = Cadena_Larga
+                    return ls_save
 
-	# 	if Lista == "":
-	# 		Lista = Cadena[0]
+            elif len(st_check) == len(st_word[in_flag:]):
+                in_flag = in_flag+1
+                st_check = ""
 
-	# except ValueError:
-	# 	Lista = Cadena[0]
+    return ls_save
 
-	return Lista
+ls_prove = ["babad","cbbd","bb","qweewq","a","ac","abb","abadd","babadada"]#["cbcdcbedcbc"]#
 
-Lista = ["babad","cbbd","bb","qweewq","a","ac","abb","abadd","babadada"]#["cbcdcbedcbc"]#
+for ii in range(0,len(ls_prove),1):
+    print(longest_palindrome(ls_prove[ii]))
 
-# def longestPalindrome( s: str) -> str:
-# 	if len(s) <= 1:
-# 		return s
-
-# 	Max_Len=1
-# 	Max_Str=s[0]
-# 	for i in range(len(s)-1):
-# 		for j in range(i+1,len(s)):
-# 			print(s[i:j+1],s[i:j+1][::-1])
-# 			if j-i+1 > Max_Len and s[i:j+1] == s[i:j+1][::-1]:
-# 				Max_Len = j-i+1
-# 				Max_Str = s[i:j+1]
-
-# 	return Max_Str
-
-for i in range(0,len(Lista),1):
-	Activo = longestPalindrome(Lista[i])
-	print(Activo)
-
-
-ista = ["aba","dd","a","aaa"]
-
-
+# Finite Incantatem

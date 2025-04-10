@@ -25,9 +25,9 @@ def climb_stairs( in_n: int) -> int:
     """ climb_stairs
 
     Parameters:
-        - in_n (int) - Número de pasos
+        - in_n *(int)* - Número de pasos
     Returns:
-        -  ls_save (list) - Pasos finales 
+        -  ls_save *(list)* - Pasos finales 
     """
     ls_save = [0] * (in_n + 1); ls_save[0] = 1; ls_save[1] = 1
 
