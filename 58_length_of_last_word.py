@@ -25,7 +25,7 @@ def length_of_last_word(st_word: str) -> int:
     Parameters:
         - st_word *(str)* - Enuciado de interés
     Returns:
-        - in_lenght *(int)* - Tamaño de la ultima palabra
+        - in_length *(int)* - Tamaño de la ultima palabra
     """
     st_split = st_word.split(" ")
     bo_flag = True
@@ -36,9 +36,9 @@ def length_of_last_word(st_word: str) -> int:
         elif st_split[-1] != "":
             bo_flag = False
 
-    in_lenght = len(st_split[-1])
+    in_length = len(st_split[-1])
 
-    return in_lenght
+    return in_length
 
 ls_word = ["Hello World","   fly me   to   the moon  ","luffy is still joyboy"]
 

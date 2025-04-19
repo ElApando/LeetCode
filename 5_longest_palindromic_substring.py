@@ -36,16 +36,16 @@ def longest_palindrome(st_word: str) -> str:
 
                 if len(st_check) == len(st_word[in_flag:]):
                     in_max = 0
-                    st_word_lenght = ""
+                    st_word_length = ""
 
                     for element in ls_save:
                         size = len(element)
 
                         if size > in_max:
-                            st_word_lenght = element
+                            st_word_length = element
                             in_max = size
 
-                    ls_save = st_word_lenght
+                    ls_save = st_word_length
 
                     if ls_save == "":
                         ls_save = st_word[0]

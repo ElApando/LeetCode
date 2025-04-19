@@ -51,7 +51,7 @@ def remove_element(ls_nums: list, in_val: int) -> int:
         - ls_nums *(list)* - Lista con los valores de interés
         - in_val *(int)* - Valor que se busca eliminar de los datos
     Returns:
-        - Lenght *(int)* - Tamaño de la lista después de haber eliminado los elementos deseados
+        - length *(int)* - Tamaño de la lista después de haber eliminado los elementos deseados
     """
 
     ls_save = []

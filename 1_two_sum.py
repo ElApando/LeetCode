@@ -26,10 +26,10 @@ def two_sum(ls_data, ls_goal):
     """ Suma de dos números
     
     Parameters:
-        - ls_data *(list)* - 
-        - ls_goal *(list)* - 
+        - ls_data *(list)* - Lista con los datos
+        - ls_goal *(list)* - Lista con el número objetivo
     Returns:
-	    - ls_
+	    - ls_result *(list)* - Lista con las posiciones de los números 
     
     """
 

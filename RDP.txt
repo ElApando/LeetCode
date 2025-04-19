@@ -1,0 +1,7 @@
+Reglas del Repositorio
+
+1- Debe de contar un ambiente virtual
+    1.1- El nombre del ambiente debe ser lo siguiente env-nombre
+    2.1- Se debe de modificar ell activador
+2- CPH archivo de cosas por hacer
+3- Los commit se suben cada viernes 

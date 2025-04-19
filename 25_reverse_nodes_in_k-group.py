@@ -24,10 +24,10 @@ def find_median_sorted_arrays(in_k:int, ls_data:list):
     """
 
     ls_save = []
-    in_lenght = int(len(ls_data)/in_k)
+    in_length = int(len(ls_data)/in_k)
     in_accumulate = in_k
 
-    for jj in range(in_lenght):
+    for jj in range(in_length):
         ls_goal = ls_data[jj*in_k:in_accumulate]
         ls_goal.reverse()
         ls_save.append(ls_goal)

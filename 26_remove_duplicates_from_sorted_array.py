@@ -51,7 +51,7 @@ def remove_duplicates(ls_nums: list) -> int:
     Parameters:
 		- ls_nums *(list)* - Lista que debe de ser depurada
     Returns:
-		- lenght *(int)* - Tamaño de la lista después de eliminar los duplicados
+		- length *(int)* - Tamaño de la lista después de eliminar los duplicados
     """
 
     ls_save = []

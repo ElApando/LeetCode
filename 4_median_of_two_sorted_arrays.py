@@ -30,10 +30,10 @@ def find_median_sorted_arrays(ls_num_1:list, ls_num_2:list)->float:
         ls_num_1.append(jj)
 
     ls_num_1.sort()
-    in_lenght = len(ls_num_1)
-    in_half = int(in_lenght/2)
+    in_length = len(ls_num_1)
+    in_half = int(in_length/2)
 
-    if in_lenght % 2 == 0:
+    if in_length % 2 == 0:
         in_num_1 = ls_num_1[in_half-1]
         in_num_2 = ls_num_1[in_half]
         fl_median = (float(in_num_1) + float(in_num_2))/2
