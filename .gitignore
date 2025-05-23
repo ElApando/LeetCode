@@ -1,1 +1,4 @@
 CPH.txt
+RDP.txt
+.gitignore
+*__pycache__*
