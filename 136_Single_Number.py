@@ -15,17 +15,16 @@ Input: nums = [1]
 Output: 1
 """
 
-def singleNumber(nums: list[int]) -> int:
+def single_number(nums: list[int]) -> int:
+    """ Busqueda de un número único"""
     for num in nums:
         if nums.count(num) == 1:
             in_unique = num
             return in_unique
 
-
-
 ls_prove = [[2,2,1], [4,1,2,1,2], [1]]
 
 for prove in ls_prove:
-    print(singleNumber(prove))
+    print(single_number(prove))
 
 # Finite Incantatem
