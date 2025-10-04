@@ -45,7 +45,6 @@ def create_linked_list(values):
         current = current.next
     return head
 
-
 class solution:
     def has_cycle(self, head: Optional[ListNode]) -> bool:
         a = head
