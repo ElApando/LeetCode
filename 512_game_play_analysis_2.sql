@@ -1,0 +1,52 @@
+-- 512. Game Play Analysis II
+
+-- +--------------+---------+
+-- | Column Name | Type |
+-- +--------------+---------+
+-- | player_id | int |
+-- | device_id | int |
+-- | event_date | date |
+-- | games_played | int |
+-- +--------------+---------+
+
+-- (player_id, event_date) is the primary key of this table.
+-- This TABLE shows the activity of players of some game.
+-- Each row is a record of a player who logged IN AND played a number of games
+-- (possibly 0) before logging out ON some day USING some device. 
+-- Write a SQL query that reports the device that is first logged IN for each player.
+-- The query result format is IN the following example: 
+
+-- Activity table:
+
+-- +-----------+-----------+------------+--------------+
+-- | player_id | device_id | event_date | games_played |
+-- +-----------+-----------+------------+--------------+
+-- | 1 | 2 | 2016-03-01 | 5 |
+-- | 1 | 2 | 2016-05-02 | 6 |
+-- | 2 | 3 | 2017-06-25 | 1 |
+-- | 3 | 1 | 2016-03-02 | 0 |
+-- | 3 | 4 | 2018-07-03 | 5 |
+-- +-----------+-----------+------------+--------------+ 
+
+-- Result table:
+-- +-----------+-----------+
+-- | player_id | device_id |
+-- +-----------+-----------+
+-- | 1 | 2 |
+-- | 2 | 3 |
+-- | 3 | 1 |
+-- +-----------+-----------+
+
+SELECT  a1.player_id, 
+        a1.device_id
+FROM Activity a1
+JOIN (SELECT player_id, 
+             MIN(event_date) AS first_date
+      FROM Activity
+      GROUP BY player_id) a2
+ON a1.player_id = a2.player_id
+AND a1.event_date = a2.first_date
+
+
+-- Finite Incantatem
+
