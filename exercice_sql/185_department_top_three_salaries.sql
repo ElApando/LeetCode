@@ -94,3 +94,5 @@ SELECT  Department
        ,Salary
 FROM antes
 WHERE salary_rank <= 3
+
+-- Finite Incantatem
